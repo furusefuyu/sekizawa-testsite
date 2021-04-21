@@ -1,0 +1,61 @@
+<div class="top-wrapper">
+            <div class="container member">
+                <div class="current-member">
+                    <div class="teacher">
+                        <h1 class="title">教員{Teacher(s)}</h1>
+                        <p class="name"><a href="http://www.cs.ce.nihon-u.ac.jp/~sekizawa/members/sekizawa/index.html">関澤 俊弦 (Toshifusa Sekizawa)</a>   (<a href="http://kenkyu-web.cin.nihon-u.ac.jp/Profiles/109/0010869/profile.html">official profile</a> at Nihon University)</p>
+                    </div>
+                    
+                    <% if @currentMasterMemberContentList != nil %> 
+                    <div class="master-students">
+                        <h1 class="title">修士 (Master's course)</h1>
+                        <% @currentMasterMemberContentList.each do |currentMasterMemberContentItem| %>
+                        <div class="name">
+                            <p class="jp"><%= currentMasterMemberContentItem.name_jp %></p>
+                            <p class="en">(<%= currentMasterMemberContentItem.name_en %>)</p>
+                        </div>
+                    </div>
+                        <% end %>
+                    <% end %>
+                    <div class="undergraduate-students">
+                        <h1 class="title">学部生 (undergraduate)</h1>
+                        <% @currentBachelorMemberContentList.each do |currentBachelorMemberContentItem| %>
+                            <div class="name">
+                                <p class="jp"><%= currentBachelorMemberContentItem.name_jp%></p>
+                                <p class="en">(<%= currentBachelorMemberContentItem.name_en%>)</p>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="clear-left"></div>
+                <div class="previous-member">
+                    <h1 class="title">卒業生(graduates)</h1>
+                        <% @graduateStudentsContentList.each do |graduateStudentsContentItem| %>
+                            <div class="one-year-member">
+                            <h1 class="title"><%= graduateStudentsContentItem[:title] %>年 3月 (March <%= graduateStudentsContentItem[:title] %>)</h1>
+                            <% if graduateStudentsContentItem[:masterStudents] != [] %>
+                                <div class="master-students">
+                                    <h1 class="title">M2</h1>
+                                    <% graduateStudentsContentItem[:masterStudents].each do |masterStudentsItem| %>
+                                        <div class="name">
+                                            <p class="jp"><%= masterStudentsItem[0] %></p>
+                                            <p class="en">(<%= masterStudentsItem[1] %>)</p>
+                                        </div>
+                                    <% end %>
+                                </div>   
+                            <% end %>                         
+                            
+                                <div class="bachelor-students">
+                                    <h1 class="title">B4</h1>
+                                    <% graduateStudentsContentItem[:bachelorStudents].each do |bechelorStudentItem| %>
+                                        <div class="name">
+                                            <p class="jp"><%= bechelorStudentItem[0] %></p>
+                                            <p class="en">(<%= bechelorStudentItem[1] %>)</p>
+                                        </div>
+                                    <% end %>
+                                </div>                                    
+                            </div>
+                        <% end %>                        
+                </div>
+            </div>        
+        </div>

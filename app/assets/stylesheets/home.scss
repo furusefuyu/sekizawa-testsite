@@ -1,0 +1,81 @@
+.lab-explain {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  
+  .top-wrapper p {
+    font-size: 20px;
+    padding: 0 30px;
+  }        
+
+  .top-topic-wrapper {
+    width: 100%;
+    padding: 50px 0 10px 5px;
+
+  }
+  .top-topic-wrapper h2 {
+    color: black;
+    opacity: 0.7;
+    text-align: center;
+  }
+  .top-topic {
+    float: left;
+    background-color: #efefef;
+    width:  38%;
+    margin-left: 80px;
+    padding: 50px 30px 30px 80px;
+    height: 100%;    
+  }
+  .topic-image {
+    display: inline-block;
+    width: 100%;
+    height: 450px;
+    border-radius:  6px;
+  }
+  .top-topic .title {
+    color: #444;
+    font-weight: 800;
+    text-align: center;
+  }
+  .top-topic p {
+    display: flex;
+    height: 200px;
+    padding-left: 20px;
+  }  
+
+  .topic-wrapper {
+    padding-top: 50px;
+    padding-left: 60px;
+    height: 350px;
+  }
+  .topic-wrapper .topics h2 {
+    color: black;
+    opacity: 0.7;
+    margin-bottom: 10px;
+  }
+  .topic-wrapper .topics {
+    float: left;
+    width: 55%;
+    margin-left: 20px;
+  }
+  .topic-wrapper .title {
+    list-style: square;
+    font-size: 18px;
+    font-weight: 200;
+  }
+  .topic-wrapper .topics p {
+    margin: 5px 0;
+    font-size: 18px;
+    padding-left: 0px;
+  }
+  .topic-wrapper .topics .content {
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+
+  .Facebook-wrapper {
+    float: left;
+    width:  40%;
+    padding: 10px 100px;
+    background-color: #efefef;
+  }

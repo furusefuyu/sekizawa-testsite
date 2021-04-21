@@ -1,0 +1,19 @@
+<div class="top-wrapper">
+            <div class="container">
+                <h1 class="title">アクセス(Access)</h1>                
+                <div class="lab-index">
+                <% @accessContentList.each do |accessContentItem| %>
+                    <div class=<%= accessContentItem.className %>>
+                        <h2 class="title"><%= accessContentItem.title %></h2>
+                        <div class="address">
+                        <%= raw accessContentItem.address %>
+                        </div>
+                    </div>
+                <% end %>                     
+                    <div class="map">
+                        <iframe frameBorder="0" scrolling="yes" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3171.304084820991!2d140.3829017!3d37.3589811!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60206b04463136c9%3A0x800db6901da8b28f!2z77yW77yR5Y-36aSo!5e0!3m2!1sja!2sjp!4v1396190096517"></iframe>
+                    </div>
+                </div>
+                
+            </div>        
+        </div>

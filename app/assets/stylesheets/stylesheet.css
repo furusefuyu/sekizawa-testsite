@@ -1,0 +1,397 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: #efefef;
+  }
+  head {
+    width: 100%;
+    height: 100%;
+  }
+
+  * a {
+    text-decoration-line: none;
+  }
+  * a:link {
+    color: #1f6876;
+  }
+  
+  .drawer-hamburger {
+    display: none;
+    visibility: hidden;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  
+  header { /* ヘッダーの設定 */
+    position: absolute;
+    top: 0;
+    height: 20%;
+    width: 100%;    
+  }
+  header .container {
+    background-color: #1b2f4e;
+  }
+
+  .logo { /* ヘッダーのロゴ設定 */
+    margin-top: 20px;
+    margin-left: 70px;
+  }
+  
+  
+  .header-right {/* ヘッダーのメニュー設定 */
+    float: right;
+    padding-right: 50px;
+  }
+  
+  .header-right input {
+    position: relative;
+    top: -80px;
+    line-height: 30px;
+    margin-left: 20px;
+    padding: 10px 25px;
+    color: #1b2f4e;
+    background-color: #efefef;
+    border: 2px solid #1f6876;
+    float: left;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .header-right input:hover {
+    background-color: #1b2f4e;
+    color:#efefef;
+    transition: all 0.5s;
+  }
+  .header-right .current-tab {
+    background-color: #1b2f4e;
+    color:#efefef;
+  }
+
+  .navigation {/* メニューナビゲーション（ルートが日本大学から始まっているもの） */
+    width: 100%;
+    font-size: 20px;
+    padding: 20px 0px 0px 20px;
+    margin-bottom: 30px;
+    background-color: #efefef;
+    border-top: 2px solid #9cc585;
+  }
+
+  header .test-title {
+    color: black;
+    opacity: 0.7;
+    text-align: center;
+  }
+
+  .top-wrapper { /* コンテンツ部分の設定 */
+    padding-top: 190px;
+    color: black;
+    background-color: hsl(0, 0%, 94%);
+  }
+  .top-wrapper .container {
+    padding: 40px;
+    padding-top: 80px;
+  }
+  .top-wrapper h1 { /* コンテンツ部分のh1要素の設定 */
+    opacity: 0.7;
+    font-size: 25px;
+    letter-spacing: 2px;
+    padding-left: 30px;
+    text-align: center;
+  }
+
+  .clear-left {
+    clear: left;
+  }
+
+  footer {    
+    background-color: #fff;
+    border-top: 1px solid rgb(218, 217, 217);
+    margin-top: 50px;
+  }
+
+  footer p {
+    color: #aaa;
+    font-size: 20px;    
+  }
+  .drawer-menu--right .drawer-menu-item {
+    line-height: 40px;
+    color: #1b2f4e;
+    margin-top:  10px;;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+
+  @media all and (max-width: 1000px) {
+  * {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  head, body {
+    width: 100% !important;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .header-right a {
+    font-size: 15px;
+   }
+
+  .logo-wrapper {
+    text-align: center;
+  }
+  .logo {    
+    width: calc(100% - 300px);
+    height: calc(100% - 300px);
+    margin: 50px 0 10px 0;
+  }
+  .navigation {
+    font-size: 15px;
+  }
+  .menu-wrapper .drawer-hamburger { /* スマホメニュー表示用アイコンの位置設定 */
+    margin: 8px 18px;
+    padding: 10px 10px 20px 10px;
+    display: block;
+    visibility: initial;
+    position : fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 10;
+    border-radius: 6px;    
+    background-color: rgb(131, 131, 131);
+    float: left;
+  }
+
+  .drawer-hamburger .drawer-hamburger-icon,
+  .drawer-hamburger .drawer-hamburger-icon:after,
+  .drawer-hamburger .drawer-hamburger-icon:before {
+      background-color: #fff;
+  }
+
+  /* Homeの設定 */
+
+  .top-wrapper {
+    padding-top: 230px;
+    padding-left: 0;
+    max-width: 100%
+  }
+
+  .top-wrapper .container {
+    padding: 130px 10px 0px 0px;
+  }
+
+  .top-wrapper h1 {
+    padding-left: 0px;
+  }
+  .top-wrapper p {
+    padding-left: 0px;
+  }
+
+  .top-topic {
+    clear: left;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 30px;
+  }
+  .topic-image {
+    height: 100%;
+    max-width: 100%;
+  }
+  .topic-wrapper {
+    padding-top: 0px;
+  }
+  .topic-wrapper .topics {
+    clear: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .Facebook-wrapper {
+    overflow: scroll;
+    clear: left;
+    width: 100%;
+    padding: 70px 150px;
+    padding-bottom: 0px;
+    margin: 0;
+  }
+
+/* Researchの設定 */
+
+/* Memberの設定 */
+.top-wrapper .container.member {
+  padding-left: 10px;
+}
+.name {
+  display: grid;
+  float: left;
+  width:  40%;
+  margin-left: 75px;
+  padding-left: 25px;
+}
+.name p{
+  display: inline;
+  max-width: 100%;
+  margin: 10px 0px;
+  padding: 0px;
+}
+.teacher .name {
+  display: initial;
+  width: 50%;
+}
+.master-students, .undergraduate-students, .previous-member, .bachelor-students {
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+.previous-member {
+  margin-top: 100px;
+}
+
+/* Linkの設定 */
+.lab-index .link li {
+  font-size: 96%;
+}
+
+}
+
+/* モバイル向けレイアウト */
+@media all and (max-width: 600px) {
+
+  header {
+    height: 20%;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .logo-wrapper {
+    text-align: center;      
+  }
+  .logo {
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    margin-top: 50px;
+  }    
+
+  .navigation {
+    font-size: 15px;
+    top: -20%;
+    padding-top: 6px;
+    padding-left: 10px;
+  }
+
+  header .test-title {
+    font-size: 30px;
+  }
+
+  .smartPhone-list-icon { /* スマホメニュー表示用アイコンの位置設定 */
+    margin: 4px 5px;
+    width: 55px;
+    height: 35px;
+    display: block;
+  }
+  
+  .top-wrapper .container {
+    padding-left: 10px;
+  }
+  .top-wrapper {
+    padding-top: 200px;
+    padding-bottom: 50px;
+  }
+  .top-wrapper h1, p {
+    text-align: left;
+  }
+  .top-wrapper h1 {
+    font-size: 24px;
+    padding-left: 10px;
+    letter-spacing: 0;
+  }
+  .top-wrapper p {
+    font-size: 15px;
+    padding-left:5px;
+    line-height: 30px;
+  }
+  
+  .topic-wrapper {
+    margin-right: 10px; 
+    padding-top: 0;     
+  }
+
+  .top-topic {
+    padding: 0;
+    padding-top: 20px;
+  }
+  .topic-image {
+    max-width: 100%;
+  }
+
+  .topic-wrapper .topics {
+    width: 100%;
+  }
+.Facebook-wrapper {
+    padding: 0px; 
+    padding-top: 70px; 
+    width: 100%;
+  }
+  .Facebook-wrapper h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Researchの設定 */
+  .lab-index ul {
+    padding-left: 20px;
+  }
+  
+  footer .container p {
+    font-size: 100%;
+  }
+
+  /* Memberの設定 */
+  .top-wrapper .container.member {
+    padding-left: 10px;
+  }
+  .name {
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  .name p{
+    margin: 5px;
+    margin-left: 10px;
+  }
+  .teacher .name {
+    width: 60%;
+    margin-left: 10px;
+  }
+  .previous-member {
+    margin-top: 80px;
+  }
+
+  /* Linkの設定 */
+  .lab-index .link li {
+  font-size: 15px;
+  }
+}

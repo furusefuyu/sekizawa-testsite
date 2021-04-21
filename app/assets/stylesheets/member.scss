@@ -1,0 +1,26 @@
+.name {
+    margin: 30px 0px;
+    float: left;
+    width:  25%;
+  }
+  .teacher .name {
+    width: 100%;
+  }
+  
+  .teacher .title, .master-students .title, .undergraduate-students .title, .previous-member .title, .bachelor-students .title, .one-year-member .title , .one-year-member .master-students .title, .one-year-member .bachelor-students .title {
+    clear: left;
+    padding-top: 30px;
+  }
+
+  .previous-member {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: double 5px #1f6876;
+  }
+
+  .one-year-member .title{
+    margin-top: 30px
+  }
+  .one-year-member .master-students{
+    margin-top: 30px;
+  }

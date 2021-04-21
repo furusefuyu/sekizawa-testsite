@@ -1,0 +1,14 @@
+<div class="top-wrapper">
+    <div class="container">
+        <h1>確率システム (Probabilistic Systems)</h1>
+        <% @researchContentList.each do |researchContentItem|%>     
+        <div class="lab-index">                    
+            <h2 class="title"><%= researchContentItem.title %></h2>
+            <img src="<%= researchContentItem.imgSrc %>" />
+            <div class="explain">
+                <%= raw researchContentItem.content %>
+            </div>
+        </div>
+        <% end %>            
+    </div>        
+      </div> 

@@ -1,0 +1,19 @@
+<div class="top-wrapper">
+      <div class="container">
+      <h1>リンク(Link)</h1>
+        <div class="lab-index">
+            <% @linkContentList.each do |linkcontentItem| %>
+          <div class="<%= linkcontentItem.className %>"%>
+            <h2 class="title"><%= linkcontentItem.title %></h2>
+            <% linkcontentItem.contents.each do |contentItem| %>
+            <ul>
+              <li>
+                <%= raw contentItem %>
+              </li>
+            </ul>
+            <% end %>
+          </div>
+          <% end %>
+        </div>
+      </div>        
+    </div>

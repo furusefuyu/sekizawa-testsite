@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dependable Systems Lab.</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+    <!-- iScroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  </head>
+  <body class="drawer drawer--left">
+    <header>
+      <div class="container">
+            <div class="header-left">
+              <div class="logo-wrapper">
+                <img class="logo" src="/assets/labname.jpg" alt="DSL" height="60px">
+              </div>
+            </div>
+            <div class="menu-wrapper">
+                <button type="button" class="drawer-toggle drawer-hamburger">
+                  <span class="sr-only">toggle navigation</span>
+                  <span class="drawer-hamburger-icon"></span>
+                </button>
+              </div>
+              <nav class="drawer-nav" role="navigation">
+                <ul class="drawer-menu drawer-menu--right">
+                  <li><%= link_to 'Home', '/', class: 'drawer-menu-item', method: :get %></li>
+                  <li><%= link_to 'Research', '/research', class: 'drawer-menu-item', method: :get %></li>
+                  <li><%= link_to 'Member', '/member', class: 'drawer-menu-item', method: :get %></li>
+                  <li><%= link_to 'Access', '/access', class: 'drawer-menu-item', method: :get %></li>
+                  <li><%= link_to 'Link', '/link', class: 'drawer-menu-item', method: :get %></li>
+                </ul>
+              </nav>
+            </div>
+            
+            <div class="header-right">
+            <% case request.path
+               when "/" then
+                  homeClass = "current-tab"
+                  when "/Reserch" then
+                  researchClass = "current-tab"
+                  when "/Member" then
+                  memberClass = "current-tab"
+                  when "/Access" then
+                  accessClass = "current-tab"
+                  when "/Link" then
+                  linkClass = "current-tab"
+                  else
+                  end%>
+                <input class="<%= homeClass %>" value="Home" type="button" onclick="location.href='/'"></input>
+                <input class="<%= researchClass %>" value="Research" type="button" onclick="location.href='/research'"></input>
+                <input class="<%= memberClass %>" value="Member" type="button" onclick="location.href='/member'"></input>
+                <input class="<%= accessClass %>" value="Access" type="button" onclick="location.href='/access'"></input>
+                <input class="<%= linkClass %>" value="Link" type="button" onclick="location.href='/link'"></input>
+            </div>
+          </div>
+          <div class="navigation">
+            <p>&rsaquo; <a href="http://www.nihon-u.ac.jp/">日本大学</a>
+                &rsaquo; <a href="http://www.ce.nihon-u.ac.jp/">工学部</a>
+                &rsaquo; <a href="http://www.cs.ce.nihon-u.ac.jp/">情報工学科</a>
+                &rsaquo; 高信頼システム系</p>
+          </div>
+          <h1 class="test-title">このWebサイトはテスト用のものです。</h1>
+    </header>
+      <%= yield %>
+    <div class="clear-left"></div>
+    <footer>
+      <div class="container">
+        <p>© 2014-2021, Dependable Systems Laboratory, College of Engineering, Nihon University</p>
+      </div>
+    </footer>
+  </body>
+</html>
